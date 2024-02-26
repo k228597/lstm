@@ -1,5 +1,7 @@
 Ground water level prediction - LSTM
 
-地球温暖化による気候変動が海水面の上昇を引き起こし、水資源に影響を与えている. 人類は地下水を水資源として利用しており,コンピュータプログラミングを用いた地下水の水位予測は, 地下水の管理に有効である. 私は, 水位予測の正確性を向上させるために, 火山島である済州島地域を対象にピンポイントターゲティング方法を用いた地下水の水位予測モデリングを行った.
-従来のモデルでは, 地面をグリッド方法で区面化したため, このモデルは地下水と直接関係のない区域を含むことが考えられる. そこで、私は河川のない済州島をモデルケースで用いて、地下水が湧水として出る場所をピンポイントで区面化し, 地下水の水位予測の正確性を高めようとした. このモデルケースが成功すれば, 火山島である日本の地下水の水位が正確に予測できるため, 地下水の管理にもメリットがあると判断できる. 地下水に関連する降水量, 気温のデータを用いて, Pythonを使いプログラミングを行った結果, 時間順の各要素の増加量や減少量について, 一定のパターンがあると特定し, それを元にディープラーニングを行った. 長期（年単位）に適応し, 1年間の降水量, 気温の予測値を算出した. 予測値をモデルに代入した結果, 全ての期間で地下水の水位が減少することが分かった. 地表面を基準とし予測した結果, グリッド方式で-300mmから+300mmまで, ピンポイント方式では-100mmから-30mmまでの地下水の水位を得られた. この結果は私が仮説で考えた通りで, グリッド方式が地下水と直接関係のない地面を含むことで以上のようなエラー幅が広い結果を得たと考えられる.
+This research is on the application of this technology to predict groundwater levels in Jeju Island, South Korea.
+The results of this research show that LSTM deep learning technology is able to very accurately predict the groundwater level of a difficult environment like Jeju Island, and it is therefore expected to be very useful in the management and maintenance of Jeju Island's water resources going forward.
 
+To give a simplified summary of the research results, data from January 2009 to June 2020 was used as a foundation to train the LSTM deep learning model, which was then able to predict groundwater levels from July to November 2022; these predictions were then compared to actual observed meteorological data in order to validate the accuracy of the model. 
+The RMSE value obtained through this comparison, which measures the predictive power of the model, was confirmed to be 0.2175, demonstrating that the predictions were very accurate.
